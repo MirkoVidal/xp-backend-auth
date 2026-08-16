@@ -33,7 +33,6 @@ app.get('/api/guestbook', async (req, res) => {
 app.post('/api/guestbook', async (req, res) => {
     const { name, message } = req.body;
 
-    // Validación simple
     if (!name || !message) {
         return res.status(400).json({ error: 'Nombre y mensaje son obligatorios' });
     }
